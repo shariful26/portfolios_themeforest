@@ -22,6 +22,11 @@ export default function Layout() {
     );
   }
 
+  // Instant scroll to top on route change to eliminate black background scroll bleed
+  React.useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [location.pathname]);
+
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-100 via-slate-50 to-slate-200/80 dark:from-[#070a10] dark:via-[#0c1220] dark:to-[#070a10] text-neutral-900 dark:text-slate-100 transition-colors duration-300 relative overflow-hidden font-sans">
       {/* Top Scroll Progress Indicator */}
@@ -49,10 +54,10 @@ export default function Layout() {
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}
-            variants={pageTransitionVariants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -4 }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
             className="w-full"
           >
             <Outlet />
