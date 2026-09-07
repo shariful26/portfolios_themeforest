@@ -52,6 +52,7 @@ export function ScrollReveal({
     <Component
       className={className}
       initial="hidden"
+      animate="visible"
       whileInView="visible"
       viewport={{ once, amount }}
       variants={selectedVariant}
@@ -84,6 +85,7 @@ export function ScrollStaggerContainer({
     <Component
       className={className}
       initial="hidden"
+      animate="visible"
       whileInView="visible"
       viewport={{ once, amount }}
       variants={staggerContainer(staggerDelay, delayChildren)}

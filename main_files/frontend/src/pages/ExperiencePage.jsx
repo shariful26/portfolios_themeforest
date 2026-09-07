@@ -171,9 +171,10 @@ export default function ExperiencePage() {
             {/* Smooth Scroll Reveal Vertical Line */}
             <motion.div
               initial={{ scaleY: 0 }}
+              animate={{ scaleY: 1 }}
               whileInView={{ scaleY: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 1.2, ease: "easeInOut" }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
               className="absolute left-0 top-3 bottom-3 w-0.5 bg-gradient-to-b from-amber-400 via-amber-500 to-amber-600/30 origin-top pointer-events-none"
             />
 
@@ -184,6 +185,7 @@ export default function ExperiencePage() {
                   {/* Animated Glowing Timeline Node Dot */}
                   <motion.div
                     initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ type: "spring", stiffness: 350, damping: 20, delay: 0.1 }}
