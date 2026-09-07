@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Pro — Official ThemeForest Customer Documentation</title>
+  <style>
+    :root {
+      --primary: #f59e0b;
+      --primary-hover: #d97706;
+      --bg: #090d16;
+      --surface: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --border: #334155;
+      --code-bg: #020617;
+      --accent: #38bdf8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    /* Sidebar Navigation */
+    nav.sidebar {
+      width: 280px;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 30px 20px;
+      overflow-y: auto;
+    }
+    nav.sidebar h2 {
+      font-size: 18px;
+      color: var(--primary);
+      margin-top: 0;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    nav.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav.sidebar li {
+      margin-bottom: 12px;
+    }
+    nav.sidebar a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+      display: block;
+    }
+    nav.sidebar a:hover {
+      color: var(--primary);
+    }
+    /* Main Content Area */
+    main.content {
+      margin-left: 280px;
+      padding: 50px 60px;
+      max-width: 1000px;
+      width: 100%;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: 36px;
+      color: var(--primary);
+      margin: 0 0 10px 0;
+      font-weight: 800;
+    }
+    .subtitle {
+      font-size: 16px;
+      color: var(--muted);
+      margin: 0;
+    }
+    h2 {
+      font-size: 24px;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 18px;
+      color: var(--primary);
+      margin-top: 24px;
+    }
+    p, li {
+      color: #cbd5e1;
+      font-size: 15px;
+    }
+    code {
+      font-family: 'Fira Code', 'Courier New', Courier, monospace;
+      background: var(--code-bg);
+      padding: 3px 8px;
+      border-radius: 6px;
+      color: var(--accent);
+      font-size: 13px;
+      border: 1px solid var(--border);
+    }
+    pre {
+      font-family: 'Fira Code', 'Courier New', Courier, monospace;
+      background: var(--code-bg);
+      padding: 20px;
+      border-radius: 10px;
+      color: #f1f5f9;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 24px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: bold;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      margin-bottom: 15px;
+    }
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--primary);
+      color: #000;
+      font-weight: bold;
+      border-radius: 50%;
+      margin-right: 10px;
+      font-size: 14px;
+    }
+    footer {
+      margin-top: 80px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    @media (max-width: 900px) {
+      body { flex-direction: column; }
+      nav.sidebar { width: 100%; height: auto; position: relative; }
+      main.content { margin-left: 0; padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar">
+    <h2>Nexus Pro Guide</h2>
+    <ul>
+      <li><a href="#quickstart">1. Quick Start Guide</a></li>
+      <li><a href="#customization">2. Zero-Code Customization</a></li>
+      <li><a href="#contact-setup">3. Contact Form Setup</a></li>
+      <li><a href="#pdf-resume">4. PDF Resume Setup</a></li>
+      <li><a href="#lucide-icons">5. Vector Lucide Icons</a></li>
+      <li><a href="#demo-switcher">6. Hiding Demo Switcher</a></li>
+      <li><a href="#deployment">7. Deployment (Vercel/Netlify)</a></li>
+      <li><a href="#support">8. Customer Support</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="content">
+    <header>
+      <span class="badge">React 19 + Vite + Tailwind CSS v4</span>
+      <h1>Nexus Pro Customer Documentation</h1>
+      <p class="subtitle">Complete installation, configuration, customization & deployment guide for ThemeForest buyers.</p>
+    </header>
+
+    <!-- SECTION 1: QUICK START -->
+    <section id="quickstart">
+      <h2><span class="step-num">1</span> Quick Start Guide</h2>
+      <p>Follow these simple steps to run the template on your computer:</p>
+      
+      <div class="card">
+        <h3>Prerequisites</h3>
+        <p>Ensure you have <strong>Node.js (v18 or higher)</strong> installed on your system. You can download Node.js from <a href="https://nodejs.org" target="_blank" style="color:var(--accent)">nodejs.org</a>.</p>
+
+        <h3>Installation Commands</h3>
+        <pre><code># 1. Unzip the downloaded package and open terminal in frontend folder
+cd frontend
+
+# 2. Install all dependencies
+npm install
+
+# 3. Start local development server
+npm run dev</code></pre>
+        <p>Open your browser and navigate to <code>http://localhost:3000</code> to view your live portfolio!</p>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ZERO-CODE CUSTOMIZATION -->
+    <section id="customization">
+      <h2><span class="step-num">2</span> 100% Zero-Code Customization</h2>
+      <p>All portfolio information, bio, social links, projects, skills, services, experience, testimonials, and blog posts are controlled from a single configuration file:</p>
+      <p><code>src/data/portfolio.config.js</code></p>
+
+      <div class="card">
+        <h3>Editing Profile Information</h3>
+        <pre><code>export const portfolioData = {
+  profile: {
+    name: "Your Full Name",
+    role: "Senior Full Stack Engineer & Architect",
+    headline: "Helping ambitious clients turn ideas into high-impact products.",
+    email: "yourname@domain.com",
+    phone: "+1 (555) 234-5678",
+    location: "San Francisco, CA (Open to Remote)",
+    avatar: "/path/to/your-photo.jpg",
+    resumeUrl: "/assets/resume.pdf",
+  },
+  // Add your own projects, skills, and experience below...
+};</code></pre>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CONTACT FORM SETUP -->
+    <section id="contact-setup">
+      <h2><span class="step-num">3</span> Setting Up Live Contact Form Email</h2>
+      <p>The contact form supports both <strong>Formspree.io</strong> (free form service) and a direct <code>mailto:</code> fallback.</p>
+
+      <div class="card">
+        <h3>Option A: Formspree Setup (Recommended)</h3>
+        <ol>
+          <li>Create a free account at <a href="https://formspree.io" target="_blank" style="color:var(--accent)">Formspree.io</a>.</li>
+          <li>Create a new form and copy your Endpoint URL (e.g., <code>https://formspree.io/f/xyzabckz</code>).</li>
+          <li>Open <code>src/data/portfolio.config.js</code> and update <code>contact.formspreeEndpoint</code>:</li>
+        </ol>
+        <pre><code>contact: {
+  formspreeEndpoint: "https://formspree.io/f/YOUR_UNIQUE_ID",
+  directEmail: "yourname@domain.com",
+}</code></pre>
+
+        <h3>Option B: Direct Email Fallback</h3>
+        <p>If <code>formspreeEndpoint</code> is left empty, submitting the form will automatically open the visitor's email application with your email address pre-filled!</p>
+      </div>
+    </section>
+
+    <!-- SECTION 4: PDF RESUME SETUP -->
+    <section id="pdf-resume">
+      <h2><span class="step-num">4</span> Setting Up Downloadable PDF Resume</h2>
+      <div class="card">
+        <ol>
+          <li>Place your PDF file in the public assets folder: <code>public/assets/resume.pdf</code>.</li>
+          <li>Open <code>src/data/portfolio.config.js</code>.</li>
+          <li>Update the <code>resumeUrl</code> property:</li>
+        </ol>
+        <pre><code>profile: {
+  resumeUrl: "/assets/resume.pdf",
+}</code></pre>
+        <p>Visitors clicking <strong>"Download Resume (PDF)"</strong> will immediately download your file.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: VECTOR LUCIDE ICONS -->
+    <section id="lucide-icons">
+      <h2><span class="step-num">5</span> Vector Lucide React Icons</h2>
+      <p>All icons throughout the template use <strong>lucide-react</strong> vector SVG icons. To change or add icons:</p>
+      <pre><code>import { Award, Code2, Rocket, Heart } from 'lucide-react';
+
+// Render anywhere in your JSX:
+&lt;Award className="w-6 h-6 text-amber-500" /&gt;</code></pre>
+    </section>
+
+    <!-- SECTION 6: HIDING DEMO SWITCHER -->
+    <section id="demo-switcher">
+      <h2><span class="step-num">6</span> Hiding Demo Switcher Bar Before Publishing</h2>
+      <p>To hide the floating Demo Control box at the bottom-right before publishing your live website, edit <code>src/data/portfolio.config.js</code>:</p>
+      <pre><code>demoSettings: {
+  showDemoSwitcher: false, // Set to false for client production build
+}</code></pre>
+    </section>
+
+    <!-- SECTION 7: DEPLOYMENT -->
+    <section id="deployment">
+      <h2><span class="step-num">7</span> Deploying to Production (Vercel / Netlify / Hostinger)</h2>
+      <div class="card">
+        <h3>1. Build Production Bundle</h3>
+        <pre><code>npm run build</code></pre>
+        <p>This creates an optimized <code>dist/</code> folder ready for deployment.</p>
+
+        <h3>2. Deploying to Vercel (Free & Instant)</h3>
+        <ol>
+          <li>Push your code to GitHub.</li>
+          <li>Import your repository on <a href="https://vercel.com" target="_blank" style="color:var(--accent)">Vercel.com</a>.</li>
+          <li>Framework Preset: Select <strong>Vite</strong>.</li>
+          <li>Click <strong>Deploy</strong>!</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SECTION 8: SUPPORT -->
+    <section id="support">
+      <h2><span class="step-num">8</span> Customer Support</h2>
+      <p>If you encounter any issues or have questions about setup, please reach out via our ThemeForest profile page. We respond within 24 hours!</p>
+    </section>
+
+    <footer>
+      <p>© 2026 Nexus Pro Portfolio Template. All Rights Reserved. Built for ThemeForest & Envato Authors.</p>
+    </footer>
+  </main>
+
+</body>
+</html>
